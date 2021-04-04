@@ -20,23 +20,35 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
 
 <meta name="hexo-config" content="{&quot;hostname&quot;:&quot;example.com&quot;,&quot;root&quot;:&quot;/&quot;,&quot;images&quot;:&quot;/images&quot;,&quot;scheme&quot;:&quot;Muse&quot;,&quot;version&quot;:&quot;8.3.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+<meta name="description" content="数据结构-线性表   数据结构-线性表- [Part1-基础知识](#part1-基础知识) - [Part2-顺序表的基本操作](#part2-顺序表的基本操作) - [Part3-单链表](#part3-单链表) - [Part4-双链表](#part4-双链表) - [Part5-循环链表](#part5-循环链表)   - [循环单链表](#循环单链表)   - [循环双链表](#循环双链">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构-线性表">
+<meta property="og:url" content="http://example.com/2021/04/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%BA%BF%E6%80%A7%E8%A1%A8/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="数据结构-线性表   数据结构-线性表- [Part1-基础知识](#part1-基础知识) - [Part2-顺序表的基本操作](#part2-顺序表的基本操作) - [Part3-单链表](#part3-单链表) - [Part4-双链表](#part4-双链表) - [Part5-循环链表](#part5-循环链表)   - [循环单链表](#循环单链表)   - [循环双链表](#循环双链">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601319633471&di=2ebc131de82723bb5f7b756d0f630805&imgtype=0&src=http://i0.hdslb.com/bfs/article/4061f6e37978a8ef7ee856ea25bbc98bfca5da49.png">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601359080607&di=a773255beecb2b3f197cf25eca19c6c5&imgtype=0&src=http://img2018.cnblogs.com/blog/1622171/201905/1622171-20190506200729720-521447457.png">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601359329264&di=e1e9dbfb3fb649e264a16fa8594b9805&imgtype=0&src=http://gss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/30adcbef76094b36efb11c64a3cc7cd98d109d13.jpg">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601359914100&di=e52103e53e69668bc014f704f1689cdb&imgtype=0&src=http://c.biancheng.net/cpp/uploads/allimg/120222/1-120222144435363.jpg">
+<meta property="og:image" content="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2472144723,132786293&fm=26&gp=0.jpg">
+<meta property="og:image" content="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1859570260,1224497162&fm=15&gp=0.jpg">
+<meta property="article:published_time" content="2021-04-04T08:42:33.000Z">
+<meta property="article:modified_time" content="2021-04-04T08:42:50.365Z">
 <meta property="article:author" content="LHC">
+<meta property="article:tag" content="数据结构">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601319633471&di=2ebc131de82723bb5f7b756d0f630805&imgtype=0&src=http://i0.hdslb.com/bfs/article/4061f6e37978a8ef7ee856ea25bbc98bfca5da49.png">
 
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2021/04/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%BA%BF%E6%80%A7%E8%A1%A8/">
 
 
 
-<meta name="hexo-config-page" content="{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:true,&quot;isPost&quot;:false,&quot;lang&quot;:&quot;en&quot;}">
+<meta name="hexo-config-page" content="{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en&quot;}">
 <meta name="hexo-config-calendar" content="">
 <script data-pjax src="/js/load-config.js"></script>
-  <title>Hexo</title>
+  <title>数据结构-线性表 | Hexo</title>
   
 
 
@@ -91,7 +103,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -104,6 +116,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%BA%BF%E6%80%A7%E8%A1%A8"><span class="nav-number">1.</span> <span class="nav-text">数据结构-线性表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Part1-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">Part1-基础知识</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Part2-%E9%A1%BA%E5%BA%8F%E8%A1%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">Part2-顺序表的基本操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Part3-%E5%8D%95%E9%93%BE%E8%A1%A8"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">Part3-单链表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Part4-%E5%8F%8C%E9%93%BE%E8%A1%A8"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">Part4-双链表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Part5-%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8"><span class="nav-number">1.0.0.5.</span> <span class="nav-text">Part5-循环链表</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E5%8D%95%E9%93%BE%E8%A1%A8"><span class="nav-number">1.0.0.5.1.</span> <span class="nav-text">循环单链表</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E5%8F%8C%E9%93%BE%E8%A1%A8"><span class="nav-number">1.0.0.5.2.</span> <span class="nav-text">循环双链表</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -149,16 +162,17 @@
 </noscript>
 
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%BA%BF%E6%80%A7%E8%A1%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -171,9 +185,9 @@
       <meta itemprop="name" content="Hexo">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/04/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%BA%BF%E6%80%A7%E8%A1%A8/" class="post-title-link" itemprop="url">数据结构-线性表</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          数据结构-线性表
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -197,7 +211,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="数据结构-线性表"><a href="#数据结构-线性表" class="headerlink" title="数据结构-线性表"></a>数据结构-线性表</h1><!-- TOC -->
+        <h1 id="数据结构-线性表"><a href="#数据结构-线性表" class="headerlink" title="数据结构-线性表"></a>数据结构-线性表</h1><!-- TOC -->
 
 <ul>
 <li><a href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%BA%BF%E6%80%A7%E8%A1%A8">数据结构-线性表</a><pre><code>- [Part1-基础知识](#part1-基础知识)
@@ -247,7 +261,6 @@
 <li>循环双链表中头结点的prior指针还要指向表尾节点<br><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1859570260,1224497162&fm=15&gp=0.jpg" alt="avator"></li>
 </ol>
 
-      
     </div>
 
     
@@ -255,238 +268,25 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          <div class="post-tags">
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag"># 数据结构</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/04/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/" rel="prev" title="数据结构-栈和队列">
+                  <i class="fa fa-chevron-left"></i> 数据结构-栈和队列
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
     </footer>
   </article>
 </div>
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="LHC">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/04/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/" class="post-title-link" itemprop="url">数据结构-栈和队列</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-04-04 16:41:46 / Modified: 16:42:05" itemprop="dateCreated datePublished" datetime="2021-04-04T16:41:46+08:00">2021-04-04</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="数据结构-栈和队列"><a href="#数据结构-栈和队列" class="headerlink" title="数据结构 - 栈和队列"></a>数据结构 - 栈和队列</h1><ol>
-<li>线性表<ul>
-<li>操作受限<ul>
-<li>栈: 顺序栈，链栈，共享栈</li>
-<li>队列: 循环队列，链式队列，双端队列</li>
-</ul>
-</li>
-<li>推广<ul>
-<li>数组: 一维数组 ，多维数组 ，压缩存储，稀疏矩阵</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<h3 id="1-栈"><a href="#1-栈" class="headerlink" title="1. 栈"></a>1. 栈</h3><ol>
-<li>栈是只允许在一端进行插入和删除的线性表；首先栈是一种线性表，后进先出(LIFO)</li>
-<li>数学性质: n个不同元素进栈，出栈元素不同排列个数为(1/n+1)*C(n,2n) 又称卡特兰数</li>
-</ol>
-<h4 id="1-顺序栈"><a href="#1-顺序栈" class="headerlink" title="1. 顺序栈"></a>1. 顺序栈</h4><ol>
-<li>采用顺序存储的栈成为顺序栈，利用一组地址连续的存储单元存放自栈底到栈顶的数据元素，并附设栈顶指针(top)指示当时栈顶元素的位置<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MaxSize 50</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    Elemtype data[MaxSize];</span><br><span class="line">    <span class="keyword">int</span> top;</span><br><span class="line">&#125;SqStack;</span><br><span class="line">栈顶指针: S.top ,初始 S.top=<span class="number">-1</span>，栈顶元素 S.data[S.top]</span><br><span class="line">栈空 S.top =<span class="number">-1</span>  栈满 S.top = MaxSize<span class="number">-1</span> 栈长 S.top+<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//初始化</span></span><br><span class="line"><span class="keyword">void</span> <span class="built_in">InitStack</span>(SqStack &amp;S)&#123;</span><br><span class="line">    S.top = <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 判栈空</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">StackEmpty</span><span class="params">(SqStack S)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(S.top == <span class="number">-1</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//进栈</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">Push</span><span class="params">(SqStack &amp;S,Elemtype value)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(S.top!=MaxSize<span class="number">-1</span>)&#123;</span><br><span class="line">        S.top++;</span><br><span class="line">        S.data[S.top] = value;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//出栈</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">Pop</span><span class="params">(SqStack &amp;S,Elemtype &amp;value)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(S.top != <span class="number">-1</span>)&#123;</span><br><span class="line">        value = S.data[S.top];</span><br><span class="line">        S.top--;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>; </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//获取栈顶元素</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">GetTop</span><span class="params">(SqStack S,Elemtype &amp;value)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(S.top != <span class="number">-1</span>)&#123;</span><br><span class="line">        value=S.data[S.top];</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="2-队列"><a href="#2-队列" class="headerlink" title="2. 队列"></a>2. 队列</h3></li>
-<li>只允许在一端进行插入，另一端进行删除，简称 <strong>入队</strong>，和 <strong>出队</strong> 先进先出(FIFO)</li>
-<li>队头: Front 允许删除 ; 队尾: Rear 允许插入</li>
-<li>队列顺序存储是分配一块连续的存储单元存放队列元素，并附设 队头和队尾指针<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MaxSize 50</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    ElemType data[MaxSize];</span><br><span class="line">    <span class="keyword">int</span> front,rear;</span><br><span class="line">&#125;SqQueue;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>初始(队空): Q.front = Q.rear = 0;</p>
-</blockquote>
-</li>
-</ol>
-<h4 id="2-1-循环队列"><a href="#2-1-循环队列" class="headerlink" title="2.1 循环队列"></a>2.1 循环队列</h4><ol>
-<li>将顺序队列想象成一个环状空间，即把队列元素从逻辑上视为一个环，成为 <strong>循环队列</strong><blockquote>
-<p>初始:  Q.front = Q.rear = 0;<br>队首指针进1: Q.front = (Q.front+1)%MaxSize;<br>队尾指针进1: Q.rear = (Q.rear+1)%MaxSize;<br><strong>队列长度</strong>: (Q.rear+MaxSize-Q.front)%MaxSize;<br>出队入队时，指针 <strong>按顺时针方向进1</strong><br><strong>队满</strong>: (Q.rear+1)%MaxSize = Q.front;<br><strong>队空</strong>: Q.front = Q.rear;</p>
-</blockquote>
-</li>
-</ol>
-<p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601920415053&di=1d82533ded5d1a4a3088ad64fe03ed60&imgtype=0&src=http://c.biancheng.net/cpp/uploads/allimg/140713/1-140G32234251B.jpg" alt="avator"></p>
-<ol start="2">
-<li>循环队列操作<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// initation</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InitQueue</span><span class="params">(SqQueue &amp;Q)</span></span>&#123;</span><br><span class="line">    Q.front = Q.rear = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//empty</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">empty</span><span class="params">(SqQueue &amp;Q)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>((Q.rear+<span class="number">1</span>)%MaxSize == Q.front) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// enQueue</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">enQueue</span><span class="params">(SqQueue &amp;Q, ElemType k)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>((Q.rear+<span class="number">1</span>)%MaxSize == Q.front) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    Q.data[Q.rear]= k;</span><br><span class="line">    Q.rear = (Q.rear+<span class="number">1</span>)%MaxSize;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//deQueue</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">deQueue</span><span class="params">(SqQueue &amp;Q, ElemType &amp;k)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(Q.front == Q.rear) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    k = Q.data[Q.front];</span><br><span class="line">    Q.front = (Q.front+<span class="number">1</span>)%MaxSize;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h4 id="2-2-链式队列"><a href="#2-2-链式队列" class="headerlink" title="2.2 链式队列"></a>2.2 链式队列</h4><ol>
-<li>队列的链式表示为链队列，实际上是一个同时有队头指针和队尾指针的单链表<br><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601923021139&di=671208b57210ecf76a5d88bc7a30ff3a&imgtype=0&src=http://c.biancheng.net/uploads/allimg/190426/1I5396159-1.gif" alt="avator"><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    ElemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">LinkNode</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125;LinkNode;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    LinkNode *front,*rear;</span><br><span class="line">&#125;LinkQueue;</span><br><span class="line"></span><br><span class="line"><span class="comment">//init</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InitQueue</span><span class="params">(LinkQueue &amp;Q)</span></span>&#123;</span><br><span class="line">    Q.front = Q.rear = (LinkNode*)<span class="built_in">malloc</span>(<span class="built_in"><span class="keyword">sizeof</span></span>(LinkNode));</span><br><span class="line">    Q.front-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//isempty</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isEmpty</span><span class="params">(LinkQueue  &amp;Q)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(Q.front == Q.rear) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//enQueue</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">enQueue</span><span class="params">(LinkQueue &amp;Q,ElemType k)</span></span>&#123;</span><br><span class="line">    LinkNode *s = (LinkNode*)<span class="built_in">malloc</span>(<span class="built_in"><span class="keyword">sizeof</span></span>(LinkNode));</span><br><span class="line">    s-&gt;data = k;</span><br><span class="line">    s-&gt;next = <span class="literal">NULL</span></span><br><span class="line">    Q.rear-&gt;next = s;</span><br><span class="line">    Q.rear = s;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//deQueue</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">deQueue</span><span class="params">(LinkQueue &amp;Q,ElemType &amp;k)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(Q.front == Q.rear) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    LinkNode *p = Q.front-&gt;next;</span><br><span class="line">    k = p-&gt;data;</span><br><span class="line">    Q.front-&gt;next = p-&gt;next;</span><br><span class="line">    <span class="keyword">if</span>(Q.rear == p) Q.front = Q.rear;   <span class="comment">//若原队列只有一个节点，出队以后变空</span></span><br><span class="line">    <span class="built_in">free</span>(p);</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-chap1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="LHC">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/04/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-chap1/" class="post-title-link" itemprop="url">数据结构-chap1</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-04-04 16:40:44 / Modified: 16:41:27" itemprop="dateCreated datePublished" datetime="2021-04-04T16:40:44+08:00">2021-04-04</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h1><h3 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h3><ol>
-<li>数据: 数据是信息的载体，是描述客观事物属性的数，字符及所有能输入到计算机中并被计算机程序识别和处理的符号的集合。</li>
-<li>数据元素: 数据元素是数据的基本单位，通常作为一个整体进行考虑和处理。一个数据元素可由若干个数据项组成，数据项是构成数据元素的不可分割的最小单位。例如学生记录就是一个数据元素，它由学号，姓名等数据项组成。</li>
-<li>数据对象: 是具有相同性质的数据元素的集合，是数据的一个子集。</li>
-<li>数据类型: 是一个值的集合和定义在这个集合上的一组操作的总称。<ol>
-<li>原子类型: 不可再分</li>
-<li>结构类型: 可再分解为若干成分的数据类型</li>
-<li>抽象数据类型: 描述数据的逻辑结构和抽象运算</li>
-</ol>
-</li>
-<li>数据结构: 是相互之间存在的一种或者多种特定关系的数据元素的集合。<ol>
-<li><strong>逻辑</strong>结构<ol>
-<li><strong>线性</strong>结构: 一般线性表，栈和队列，串，数组，广义表</li>
-<li><strong>非线性</strong>结构: 集合，一般树，二叉树，有向图，无向图</li>
-</ol>
-</li>
-<li><strong>存储</strong>结构<ol>
-<li><strong>顺序</strong>存储: 逻辑上相邻的元素，物理位置上也相邻; 可随机存取，单个元素占用空间上，但是会产生较多的外部碎片</li>
-<li><strong>链式</strong>存储: 借助指针来表示元素间的逻辑关系; 不会出现碎片，但是指针会占用额外空间，且只能顺序存取</li>
-<li><strong>索引</strong>存储: 建立索引表，表中的是索引项; 检索快，但是增加和删除要修改索引表，花费更多的时间</li>
-<li><strong>散列</strong>存储: 又称哈希(Hash)存储，根据元素关键字计算元素存储地址; 检索，增删快，但是若散列函数不好，可能出现冲突</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-<h3 id="2-算法"><a href="#2-算法" class="headerlink" title="2. 算法"></a>2. 算法</h3><ol>
-<li><p>算法特性</p>
-<ol>
-<li>有穷性: 必须在有穷步之后结束，每一步都在有穷时间内完成</li>
-<li>确定性: 每条指令有确切的含义，相同的输入只能得到相同的输出</li>
-<li>可行性: 算法中的操作都可通过基本运算执行有限次来实现</li>
-<li>输入: 有零个或者多个输入</li>
-<li>输出: 有一个或者多个输出</li>
-</ol>
-</li>
-<li><p>算法目标</p>
-<ol>
-<li>正确性</li>
-<li>可读性</li>
-<li>健壮性: 输入非法数据时，算法能适当做出处理</li>
-<li>效率与低存储量需求: 效率是算法执行的时间，存储量是执行过程所需最大存储空间</li>
-</ol>
-</li>
-<li><p>算法效率衡量</p>
-<ol>
-<li><strong>时间</strong>复杂度: 一个语句的频度是指该语句在算法中被重复执行的次数。 所有语句频度之和记为 <strong>T(n)</strong><br>因此 <strong>T(n) = O(f(n))</strong><ol>
-<li>严格数学定义: 若T(n)和f(n)是定义在正整数集合上的两个函数，则存在正常数C和n0，使得n&gt;=n0时，都满足0&lt;=T(n)&lt;=Cf(n)</li>
-</ol>
-</li>
-<li><strong>空间</strong>复杂度: 该算法耗费的存储空间  <strong>S(n) = O(g(n))</strong><ol>
-<li>原地工作指所需辅助空间为常量，即<strong>O(1)</strong></li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
 
 
 

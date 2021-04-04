@@ -20,27 +20,28 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
 
 <meta name="hexo-config" content="{&quot;hostname&quot;:&quot;example.com&quot;,&quot;root&quot;:&quot;/&quot;,&quot;images&quot;:&quot;/images&quot;,&quot;scheme&quot;:&quot;Muse&quot;,&quot;version&quot;:&quot;8.3.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}">
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="绪论1. 基本概念 数据: 数据是信息的载体，是描述客观事物属性的数，字符及所有能输入到计算机中并被计算机程序识别和处理的符号的集合。 数据元素: 数据元素是数据的基本单位，通常作为一个整体进行考虑和处理。一个数据元素可由若干个数据项组成，数据项是构成数据元素的不可分割的最小单位。例如学生记录就是一个数据元素，它由学号，姓名等数据项组成。 数据对象: 是具有相同性质的数据元素的集合，是数据的一个子">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2021/04/04/hello-world/index.html">
+<meta property="og:title" content="数据结构-chap1">
+<meta property="og:url" content="http://example.com/2021/04/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-chap1/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="绪论1. 基本概念 数据: 数据是信息的载体，是描述客观事物属性的数，字符及所有能输入到计算机中并被计算机程序识别和处理的符号的集合。 数据元素: 数据元素是数据的基本单位，通常作为一个整体进行考虑和处理。一个数据元素可由若干个数据项组成，数据项是构成数据元素的不可分割的最小单位。例如学生记录就是一个数据元素，它由学号，姓名等数据项组成。 数据对象: 是具有相同性质的数据元素的集合，是数据的一个子">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-04-04T08:01:11.466Z">
-<meta property="article:modified_time" content="2021-04-04T08:01:11.466Z">
+<meta property="article:published_time" content="2021-04-04T08:40:44.000Z">
+<meta property="article:modified_time" content="2021-04-04T08:41:27.190Z">
 <meta property="article:author" content="LHC">
+<meta property="article:tag" content="计算机基础">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/2021/04/04/hello-world/">
+<link rel="canonical" href="http://example.com/2021/04/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-chap1/">
 
 
 
 <meta name="hexo-config-page" content="{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en&quot;}">
 <meta name="hexo-config-calendar" content="">
 <script data-pjax src="/js/load-config.js"></script>
-  <title>Hello World | Hexo</title>
+  <title>数据结构-chap1 | Hexo</title>
   
 
 
@@ -108,7 +109,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%AA%E8%AE%BA"><span class="nav-number">1.</span> <span class="nav-text">绪论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">1.0.1.</span> <span class="nav-text">1. 基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E7%AE%97%E6%B3%95"><span class="nav-number">1.0.2.</span> <span class="nav-text">2. 算法</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -121,9 +122,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">posts</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">tags</span>
       </div>
   </nav>
 </div>
@@ -161,7 +166,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/04/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-chap1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -174,7 +179,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hello World
+          数据结构-chap1
         </h1>
 
         <div class="post-meta-container">
@@ -184,8 +189,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2021-04-04 16:01:11" itemprop="dateCreated datePublished" datetime="2021-04-04T16:01:11+08:00">2021-04-04</time>
+      <time title="Created: 2021-04-04 16:40:44 / Modified: 16:41:27" itemprop="dateCreated datePublished" datetime="2021-04-04T16:40:44+08:00">2021-04-04</time>
     </span>
 
   
@@ -198,19 +204,63 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <h1 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h1><h3 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h3><ol>
+<li>数据: 数据是信息的载体，是描述客观事物属性的数，字符及所有能输入到计算机中并被计算机程序识别和处理的符号的集合。</li>
+<li>数据元素: 数据元素是数据的基本单位，通常作为一个整体进行考虑和处理。一个数据元素可由若干个数据项组成，数据项是构成数据元素的不可分割的最小单位。例如学生记录就是一个数据元素，它由学号，姓名等数据项组成。</li>
+<li>数据对象: 是具有相同性质的数据元素的集合，是数据的一个子集。</li>
+<li>数据类型: 是一个值的集合和定义在这个集合上的一组操作的总称。<ol>
+<li>原子类型: 不可再分</li>
+<li>结构类型: 可再分解为若干成分的数据类型</li>
+<li>抽象数据类型: 描述数据的逻辑结构和抽象运算</li>
+</ol>
+</li>
+<li>数据结构: 是相互之间存在的一种或者多种特定关系的数据元素的集合。<ol>
+<li><strong>逻辑</strong>结构<ol>
+<li><strong>线性</strong>结构: 一般线性表，栈和队列，串，数组，广义表</li>
+<li><strong>非线性</strong>结构: 集合，一般树，二叉树，有向图，无向图</li>
+</ol>
+</li>
+<li><strong>存储</strong>结构<ol>
+<li><strong>顺序</strong>存储: 逻辑上相邻的元素，物理位置上也相邻; 可随机存取，单个元素占用空间上，但是会产生较多的外部碎片</li>
+<li><strong>链式</strong>存储: 借助指针来表示元素间的逻辑关系; 不会出现碎片，但是指针会占用额外空间，且只能顺序存取</li>
+<li><strong>索引</strong>存储: 建立索引表，表中的是索引项; 检索快，但是增加和删除要修改索引表，花费更多的时间</li>
+<li><strong>散列</strong>存储: 又称哈希(Hash)存储，根据元素关键字计算元素存储地址; 检索，增删快，但是若散列函数不好，可能出现冲突</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="2-算法"><a href="#2-算法" class="headerlink" title="2. 算法"></a>2. 算法</h3><ol>
+<li><p>算法特性</p>
+<ol>
+<li>有穷性: 必须在有穷步之后结束，每一步都在有穷时间内完成</li>
+<li>确定性: 每条指令有确切的含义，相同的输入只能得到相同的输出</li>
+<li>可行性: 算法中的操作都可通过基本运算执行有限次来实现</li>
+<li>输入: 有零个或者多个输入</li>
+<li>输出: 有一个或者多个输出</li>
+</ol>
+</li>
+<li><p>算法目标</p>
+<ol>
+<li>正确性</li>
+<li>可读性</li>
+<li>健壮性: 输入非法数据时，算法能适当做出处理</li>
+<li>效率与低存储量需求: 效率是算法执行的时间，存储量是执行过程所需最大存储空间</li>
+</ol>
+</li>
+<li><p>算法效率衡量</p>
+<ol>
+<li><strong>时间</strong>复杂度: 一个语句的频度是指该语句在算法中被重复执行的次数。 所有语句频度之和记为 <strong>T(n)</strong><br>因此 <strong>T(n) = O(f(n))</strong><ol>
+<li>严格数学定义: 若T(n)和f(n)是定义在正整数集合上的两个函数，则存在正常数C和n0，使得n&gt;=n0时，都满足0&lt;=T(n)&lt;=Cf(n)</li>
+</ol>
+</li>
+<li><strong>空间</strong>复杂度: 该算法耗费的存储空间  <strong>S(n) = O(g(n))</strong><ol>
+<li>原地工作指所需辅助空间为常量，即<strong>O(1)</strong></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
 
     </div>
 
@@ -219,9 +269,21 @@
     
 
     <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" rel="tag"># 计算机基础</a>
+          </div>
 
         
 
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/04/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/" rel="next" title="数据结构-栈和队列">
+                  数据结构-栈和队列 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
     </footer>
   </article>
 </div>
