@@ -6,7 +6,7 @@
   <link href="https://lihc-hhh.github.io/atom.xml" rel="self"/>
   
   <link href="https://lihc-hhh.github.io/"/>
-  <updated>2021-04-19T13:27:52.091Z</updated>
+  <updated>2021-04-19T13:34:06.096Z</updated>
   <id>https://lihc-hhh.github.io/</id>
   
   <author>
@@ -17,23 +17,24 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>TexStudio无法编译出参考文献解决方法</title>
     <link href="https://lihc-hhh.github.io/2021/04/19/TexStudio%E6%97%A0%E6%B3%95%E7%BC%96%E8%AF%91%E5%87%BA%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
     <id>https://lihc-hhh.github.io/2021/04/19/TexStudio%E6%97%A0%E6%B3%95%E7%BC%96%E8%AF%91%E5%87%BA%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</id>
-    <published>2021-04-19T13:28:44.319Z</published>
-    <updated>2021-04-19T13:27:52.091Z</updated>
+    <published>2021-04-19T13:33:40.000Z</published>
+    <updated>2021-04-19T13:34:06.096Z</updated>
     
-    <content type="html"><![CDATA[<ul><li><h1 id="TexStudio编译参考文献"><a href="#TexStudio编译参考文献" class="headerlink" title="TexStudio编译参考文献"></a>TexStudio编译参考文献</h1><p>前几天在写论文时遇到了TexStudio无法编译出参考文献的问题，明明使用的默认的模板，几经周折，找到了正确且有效的解决方法。当然找的过程也遇到了一些**(脏话)的无脑转载误人子弟。</p><p>前提：论文文件是<strong>main.tex</strong>, 参考文献文件 是<strong>main.bib</strong>。这<strong>两个文件要放在同一个文件夹下</strong>。main只是文件名，这个不影响，不过这两个文件<strong>必须放在同一个文件夹下</strong>。</p><p>如果不会创建bib文件，可以先创建text文件，之后再修改后缀名即可。</p><p><strong>正文开始</strong></p><p>TexStudio要想编译出参考文献须满足下列几个条件</p><ul><li><p>bib中的文献在论文中要有引用 ，如果没有引用，只放在bib文件中是无法编译出的。</p><p> 引用方式如下</p></li></ul><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\cite</span>&#123;放入文献的内容&#125;</span><br><span class="line"></span><br><span class="line">一般都用Bibtex格式</span><br><span class="line">这是一个bibtex格式的一篇论文引用，要想正确引用，就要使用</span><br><span class="line"><span class="keyword">\cite</span>&#123;2014LFD&#125;</span><br><span class="line"></span><br><span class="line">@inproceedings&#123;2014LFD,</span><br><span class="line">title=&#123;LFD: Lost and found dog application on mobile&#125;,</span><br><span class="line">author=&#123; Chutichudet, S.  and  Kanthathasiri, T.  and  Ritsakunchai, I.  and D Wongsawang&#125;,</span><br><span class="line">booktitle=&#123;Student Project Conference&#125;,</span><br><span class="line">year=&#123;2014&#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">cite引用一般是跟在正文的文字后面</span><br><span class="line">这样才能进行下一步</span><br></pre></td></tr></table></figure><ul><li>在合适的正文段落后面加上cite引用后，就是要执行正确的编译阶段了。由于要编译bib文件，所以要按顺序编译。</li><li>正确的编译顺序操作就是 <ul><li>按F6即可编译tex文件</li><li>按F8即可编译bib文件</li></ul></li><li>按顺序执行完上述两步编译后，你的参考文献就会出现在你的论文中了。</li><li>此操作不需要引用任何包！</li><li>我在写论文的时候就深受texstudio无法编译出参考文献的苦恼，百度了很久，只有一些<strong>极其不负责任</strong>的博主在转载同一篇文章，丝毫没有细节可言。</li><li>他们在文章中提到的解决方法就是<ul><li>LaTeX编译</li><li>BibTex编译</li><li>LaTeX编译</li><li>LaTeX编译</li></ul></li><li>但他们只是<strong>无脑转载</strong>，不提供具体的操作方法</li><li>所以如果你使用了本方法解决了你的问题，就是我最大的幸运！</li></ul></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="TexStudio编译参考文献"><a href="#TexStudio编译参考文献" class="headerlink" title="TexStudio编译参考文献"></a>TexStudio编译参考文献</h1><p>前几天在写论文时遇到了TexStudio无法编译出参考文献的问题，明明使用的默认的模板，几经周折，找到了正确且有效的解决方法。当然找的过程也遇到了一些**(脏话)的无脑转载误人子弟。</p><p>前提：论文文件是<strong>main.tex</strong>, 参考文献文件 是<strong>main.bib</strong>。这<strong>两个文件要放在同一个文件夹下</strong>。main只是文件名，这个不影响，不过这两个文件<strong>必须放在同一个文件夹下</strong>。</p><p>如果不会创建bib文件，可以先创建text文件，之后再修改后缀名即可。</p><p><strong>正文开始</strong></p><p>TexStudio要想编译出参考文献须满足下列几个条件</p><ul><li><p>bib中的文献在论文中要有引用 ，如果没有引用，只放在bib文件中是无法编译出的。</p><p>引用方式如下</p></li></ul><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\cite</span>&#123;放入文献的内容&#125;</span><br><span class="line"></span><br><span class="line">一般都用Bibtex格式</span><br><span class="line">这是一个bibtex格式的一篇论文引用，要想正确引用，就要使用</span><br><span class="line"><span class="keyword">\cite</span>&#123;2014LFD&#125;</span><br><span class="line"></span><br><span class="line">@inproceedings&#123;2014LFD,</span><br><span class="line">title=&#123;LFD: Lost and found dog application on mobile&#125;,</span><br><span class="line">author=&#123; Chutichudet, S.  and  Kanthathasiri, T.  and  Ritsakunchai, I.  and D Wongsawang&#125;,</span><br><span class="line">booktitle=&#123;Student Project Conference&#125;,</span><br><span class="line">year=&#123;2014&#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">cite引用一般是跟在正文的文字后面</span><br><span class="line">这样才能进行下一步</span><br></pre></td></tr></table></figure><ul><li>在合适的正文段落后面加上cite引用后，就是要执行正确的编译阶段了。由于要编译bib文件，所以要按顺序编译。</li><li>正确的编译顺序操作就是 <ul><li>按F6即可编译tex文件</li><li>按F8即可编译bib文件</li></ul></li><li>按顺序执行完上述两步编译后，你的参考文献就会出现在你的论文中了。</li><li>此操作不需要引用任何包！</li><li>我在写论文的时候就深受texstudio无法编译出参考文献的苦恼，百度了很久，只有一些<strong>极其不负责任</strong>的博主在转载同一篇文章，丝毫没有细节可言。</li><li>他们在文章中提到的解决方法就是<ul><li>LaTeX编译</li><li>BibTex编译</li><li>LaTeX编译</li><li>LaTeX编译</li></ul></li><li>但他们只是<strong>无脑转载</strong>，不提供具体的操作方法</li><li>所以如果你使用了本方法解决了你的问题，就是我最大的幸运！</li></ul>]]></content>
     
     
       
       
-    <summary type="html">&lt;ul&gt;
-&lt;li&gt;&lt;h1 id=&quot;TexStudio编译参考文献&quot;&gt;&lt;a href=&quot;#TexStudio编译参考文献&quot; class=&quot;headerlink&quot; title=&quot;TexStudio编译参考文献&quot;&gt;&lt;/a&gt;TexStudio编译参考文献&lt;/h1&gt;&lt;p&gt;前几天在写论文时遇</summary>
+    <summary type="html">&lt;h1 id=&quot;TexStudio编译参考文献&quot;&gt;&lt;a href=&quot;#TexStudio编译参考文献&quot; class=&quot;headerlink&quot; title=&quot;TexStudio编译参考文献&quot;&gt;&lt;/a&gt;TexStudio编译参考文献&lt;/h1&gt;&lt;p&gt;前几天在写论文时遇到了TexStud</summary>
       
     
     
     
+    
+    <category term="计算机基础" scheme="https://lihc-hhh.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
