@@ -125,7 +125,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -159,6 +159,107 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lihc-hhh.github.io/2021/04/04/%E9%9D%99%E6%80%81%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="LHC">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/04/%E9%9D%99%E6%80%81%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A/" class="post-title-link" itemprop="url">静态动态绑定</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-04-04 16:45:29 / 修改时间：16:48:22" itemprop="dateCreated datePublished" datetime="2021-04-04T16:45:29+08:00">2021-04-04</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Java-–-静态绑定和动态绑定"><a href="#Java-–-静态绑定和动态绑定" class="headerlink" title="Java – 静态绑定和动态绑定"></a>Java – 静态绑定和动态绑定</h1><!-- TOC -->
+
+<ul>
+<li><a href="#java----%E9%9D%99%E6%80%81%E7%BB%91%E5%AE%9A%E5%92%8C%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A">Java – 静态绑定和动态绑定</a><pre><code>- [1. 概念](#1-概念)
+- [2. 静态绑定](#2-静态绑定)
+- [3. 动态绑定](#3-动态绑定)
+- [4. 小结](#4-小结)
+</code></pre>
+</li>
+</ul>
+<!-- /TOC -->
+<h4 id="1-概念"><a href="#1-概念" class="headerlink" title="1. 概念"></a>1. 概念</h4><p><strong>绑定</strong>: 把一个方法与其所在的类/对象 关联起来叫做方法的绑定。分为静态绑定(前期绑定)和动态绑定(后期绑定)</p>
+<h4 id="2-静态绑定"><a href="#2-静态绑定" class="headerlink" title="2. 静态绑定"></a>2. 静态绑定</h4><p><strong>静态绑定</strong>: 在程序运行前就已经知道方法属于哪个类，在编译时就可以连接到类中，定位到这个方法<br>在Java中，==final，private，static==修饰的方法以及构造函数都是静态绑定，不需要程序运行，不需具体的实例对象就可以知道这个方法的具体内容<br>Private: 私有，被private修饰的方法是无法由本类之外的其他类所调用的，也就是本类特有，所以就由编译器识别方法属于哪个类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String talk;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> String <span class="title">canTalk</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> talk;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Person p = <span class="keyword">new</span> Person();</span><br><span class="line">        <span class="comment">// private 修饰的方法是Person类独有的，所以Animal类无法访问(动物本来就不能说话)</span></span><br><span class="line"><span class="comment">//        p.canTalk();</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>final: final修饰的方法不能重写，但可以由子类调用，生命为final可以关闭动态绑定</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Fruit</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String fruitName;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">final</span> String <span class="title">eatingFruit</span><span class="params">(String name)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;eating&quot;</span> + name);</span><br><span class="line">        <span class="keyword">return</span> fruitName;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Apple</span> <span class="keyword">extends</span> <span class="title">Fruit</span></span>&#123;</span><br><span class="line"><span class="comment">//  不能重写final方法，eatingFruit只属于Fruit类，Apple类无法调用</span></span><br><span class="line"><span class="comment">//    final String eatingFruit(String name)&#123;</span></span><br><span class="line"><span class="comment">//        super.eatingFruit(name);</span></span><br><span class="line"><span class="comment">//    &#125;</span></span><br><span class="line">    <span class="function">String <span class="title">eatingApple</span><span class="params">(String name)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">super</span>.eatingFruit(name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<p>static: static修饰的方法只能通过<strong>类名.变量名</strong>直接调用，这样的话类名就是确定的，并不会产生多态</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SuperClass</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sayHello</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;由 superclass 说你好&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SubClass</span> <span class="keyword">extends</span> <span class="title">SuperClass</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sayHello</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;由 SubClass 说你好&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        SuperClass.sayHello();</span><br><span class="line">        SubClasss.sayHello();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>&nbsp;</p>
+<h4 id="3-动态绑定"><a href="#3-动态绑定" class="headerlink" title="3. 动态绑定"></a>3. 动态绑定</h4><p><strong>动态绑定</strong>: 在程序运行过程中，根据具体的实例对象才能具体确定哪个方法<br>动态绑定是多态性的关键，它通过方法表实现: 每个类被加载到虚拟机的时候，在方法区保存元数据，包括一个叫做**方法表(method table)**的东西，表中记录了这个类定义的方法的指针，每个表项指向一个具体的方法。</p>
+<blockquote>
+<p>绑定过程:<br>1.虚拟机提取对象的实际类型的方法表<br>2.虚拟机搜索方法签名<br>3.调用方法</p>
+</blockquote>
+<p>动态绑定发生在父子类的转换声明之下:</p>
+<blockquote>
+<p>Parent p = new Children();<br>p.say();<br>Children 继承自Parent，重写了say；<br>过程:</p>
+</blockquote>
+<ol>
+<li>编译：向上转型时，用父类引用执行子类对象，并可以用父类引用调用子类中重写了的同名方法，但是不能调用子类中新增的方法; 因为在代码的编译阶段，编译器通过 声明对象的类型（即引用本身的类型） 在方法区中该类型的方法表中查找匹配的方法（最佳匹配法：参数类型最接近的被调用），如果有则编译通过。编译阶段是确保方法的正确性，保证程序能顺利安全的运行 </li>
+<li>运行：我们又知道，ft.say()调用的是Son中的say()，这不就与上面说的，查找Father类的方法表的匹配方法矛盾了吗？不，这里就是动态绑定机制的真正体现、</li>
+<li>上面编译阶段在 <strong>声明对象类型</strong> 的方法表中查找方法，只是为了安全地通过编译（也为了检验方法是否是存在的）。而在实际运行这条语句时，在执行 Parent p = new Children(); 这一句时创建了一个Children实例对象，然后在 <strong>p.say()</strong> 调用方法时，JVM会把刚才的son对象压入操作数栈，用它来进行调用。</li>
+<li><strong>而用实例对象进行方法调用的过程就是动态绑定</strong>：根据实例对象所属的类型去查找它的方法表，找到匹配的方法进行调用。我们知道，子类中如果重写了父类的方法，则方法表中同名表项会指向子类的方法代码；若无重写，则按照父类中的方法表顺序保存在子类方法表中。故此：动态绑定根据对象的类型的方法表查找方法是一定会匹配（因为编译时在父类方法表中以及查找并匹配成功了，说明方法是存在的。这也解释了为何向上转型时父类引用不能调用子类新增的方法：在父类方法表中必须先对这个方法的存在性进行检验，如果在运行时才检验就容易出危险——可能子类中也没有这个方法）。</li>
+</ol>
+<h4 id="4-小结"><a href="#4-小结" class="headerlink" title="4. 小结"></a>4. 小结</h4><ol>
+<li>程序在JVM运行过程中，会把类的类型信息，static属性和方法，final常量等元数据加载到方法区，这些在类被加载时就已经知道，不需要对象的创建就能访问就是静态绑定；</li>
+<li>需要等数据创建出来，使用时根据堆中的实例对象的类型才进行取用的就是动态绑定的内容</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
